@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() 
+{
+    int temp,a,b;
+    printf("\nEnter a value 1 i.e A...");
+    scanf("%d",&a);
+    printf("\nEnter a value 2 i.e B...");
+    scanf("%d",&b);
+    temp=a;
+    a=b;
+    b=temp;
+    printf("\nEnter a value 1 i.e A...%d\n",a);
+    printf("\nEnter a value 2 i.e B...%d",b);
+    
+    return 0;
+}
