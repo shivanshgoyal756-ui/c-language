@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    float a,b,add,mul,sub,div;    
+    printf("enter a number A..");
+    scanf("%f",&a);
+    printf("enter a number B..");
+    scanf("%f",&b);
+    add=a+b;
+    printf("\nThe sum of two numbers is%.2f ",add);
+    sub=a-b;
+    printf("\nThe difference of two number is%.2f ",sub);
+    mul=a*b;
+    printf("\nThe product of two number is%.2f ",mul);
+    div=a/b;
+    printf("\nThe division of two number is%.2f ",div);
+    return 0;
+}
