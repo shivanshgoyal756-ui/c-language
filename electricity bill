@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int amt=0;
+    int u=0;
+    printf("Enter units consumed");
+    scanf("%d",&u);
+    if (u>=301 && u<=500)
+    {
+        amt=100*3+200*5+((u-300)*7)+200;
+        printf("The  bill is Rs.%d ",amt);
+    }
+    if (u>=501)
+    {
+        amt=100*3+200*5+300*7+(u-500)*10+300;
+        printf("The  bill is Rs.%d ",amt);
+    }
+    if (u>=101 && u<=300)
+    {
+        amt=100*3+(u-100)*5+180;
+        printf("The  bill is Rs.%d ",amt);
+    }
+     if (u<=100)
+    {
+        amt=100*3;
+        printf("The  bill is Rs.%d ",amt);
+    }
+return 0;
+}
