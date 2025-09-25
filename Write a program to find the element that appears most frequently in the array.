@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num;
+    printf("Enter the number");
+    scanf("%d",&num);
+    int digits=(int)log10(num);
+    digits=digits+1;
+    int ff[digits];
+    int rr[digits];
+    int dd=0;
+    int b=0;
+    int c=1;
+    ff[0]=num%10;
+    rr[0]=1;
+    num=num/10;
+     for(int z=0;z<digits;++z)
+    {
+       ff[z]=0;
+       rr[z]=0;
+    }
+    while(num>0)
+    {
+        dd=num%10;
+        for(int i=0;i<c;++i)
+        {
+            if(dd==ff[i])
+            {
+            rr[i]=rr[i]+1;
+            b=1;
+            }
+        }
+        if(b==0)
+        {
+            
+            ff[c]=dd;
+            rr[c]=1;
+            c=c+1;
+        }
+        b=0;
+        num=num/10;
+        
+    }
+   
+    
+    int large=rr[0];
+    int ll=0;
+    for(int j=0;j<digits;++j)
+    {
+        if(large<rr[j])
+       { large=rr[j];
+        ll=j;
+       }
+    }
+    printf("The number max :%d",ff[ll]);
+   
+
+    return 0;
+}
